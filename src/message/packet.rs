@@ -39,6 +39,7 @@ pub enum CoAPOption {
     Size1,
     Size2,
     NoResponse,
+    Token,
 }
 
 #[derive(PartialEq, Eq, Debug, FromPrimitive)]
@@ -438,6 +439,7 @@ impl Packet {
             CoAPOption::ProxyUri => 35,
             CoAPOption::ProxyScheme => 39,
             CoAPOption::Size1 => 60,
+            CoAPOption::Token => 61,
             CoAPOption::Size2 => 28,
             CoAPOption::NoResponse => 258
         }
